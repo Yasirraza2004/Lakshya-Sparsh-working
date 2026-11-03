@@ -2,7 +2,7 @@
  * Clearly-labelled demo portfolio data for development only.
  * Replace this service with the approved FinnSys integration when credentials/API docs are available.
  */
-export const getDemoPortfolio = (user) => ({
+const demoPortfolio = (user) => ({
   demo: true,
   asOf: new Date().toISOString(),
   investor: {
@@ -37,8 +37,29 @@ export const getDemoPortfolio = (user) => ({
     { id: "TXN-23992", date: "2026-10-05", fund: "Balanced Advantage Fund", type: "SIP Purchase", amount: 3000, status: "Completed" },
     { id: "TXN-23941", date: "2026-09-18", fund: "Large Cap Equity Fund", type: "SIP Purchase", amount: 5000, status: "Completed" },
   ],
+  plans: [
+    { id: "PLAN-1", fund: "Large Cap Equity Fund", type: "SIP", amount: 5000, frequency: "Monthly", nextDate: "2026-11-18", status: "Active" },
+    { id: "PLAN-2", fund: "Balanced Advantage Fund", type: "SIP", amount: 3000, frequency: "Monthly", nextDate: "2026-11-05", status: "Active" },
+    { id: "PLAN-3", fund: "Flexi Cap Fund", type: "SIP", amount: 2000, frequency: "Monthly", nextDate: "2026-11-21", status: "Active" },
+  ],
   alerts: [
     { id: 1, title: "Review your risk profile", description: "Keep your investor profile up to date.", date: "Action recommended" },
     { id: 2, title: "Monthly portfolio update", description: "Your demo portfolio summary is ready.", date: "This month" },
   ],
 });
+
+// Derive totals and weights from the same records used by the reports.
+export function getDemoPortfolio(user) {
+  const portfolio = demoPortfolio(user);
+  const investedAmount = portfolio.holdings.reduce((sum, h) => sum + h.invested, 0);
+  const currentValue = portfolio.holdings.reduce((sum, h) => sum + h.current, 0);
+  const totalGain = currentValue - investedAmount;
+  portfolio.summary = { investedAmount, currentValue, totalGain,
+    gainPercent: investedAmount ? Number((totalGain / investedAmount * 100).toFixed(2)) : 0,
+    activeSips: portfolio.plans.filter((p) => p.type === "SIP" && p.status === "Active").length };
+  portfolio.allocation = portfolio.allocation.map((item) => {
+    const amount = portfolio.holdings.filter((h) => h.category === item.name).reduce((sum, h) => sum + h.current, 0);
+    return { ...item, amount, value: currentValue ? Number((amount / currentValue * 100).toFixed(2)) : 0 };
+  });
+  return portfolio;
+}

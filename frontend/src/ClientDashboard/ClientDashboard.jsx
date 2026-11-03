@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./ClientDashboard.css";
+import PortfolioReports, { TaxReports } from "./PortfolioReports";
 import TransactionRequestPage from "./TransactionRequestPage";
 import InvestmentTargetsPage from "./InvestmentTargetsPage";
 
@@ -37,7 +38,7 @@ function ClientDashboard() {
   const [portfolio, setPortfolio] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [search, setSearch] = useState("");
+  const [reportView, setReportView] = useState("overview");
   const [showAlerts, setShowAlerts] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [logoutLoading, setLogoutLoading] = useState(false);
@@ -65,13 +66,6 @@ function ClientDashboard() {
 
   useEffect(() => { loadDashboard(); }, [loadDashboard]);
 
-  const filteredHoldings = useMemo(() => {
-    const holdings = portfolio?.holdings || [];
-    const term = search.trim().toLowerCase();
-    if (!term) return holdings;
-    return holdings.filter((item) => `${item.name} ${item.category} ${item.id}`.toLowerCase().includes(term));
-  }, [portfolio, search]);
-
   const logout = async () => {
     setLogoutLoading(true);
     try {
@@ -93,20 +87,18 @@ function ClientDashboard() {
   if (error && !portfolio) return <main className="ls-dashboard-state"><div className="ls-state-icon">!</div><h2>Dashboard unavailable</h2><p>{error}</p><button className="ls-btn ls-btn-primary" onClick={loadDashboard}>Try again</button><button className="ls-btn ls-btn-quiet" onClick={() => navigate("/login")}>Back to login</button></main>;
 
   const summary = portfolio?.summary || {};
-  const gainPositive = Number(summary.totalGain) >= 0;
   const currentPage = menuItems.find((item) => item.id === activePage)?.label || "Home";
 
   return (
     <div className="ls-client-app">
       <aside className={`ls-sidebar ${showMobileMenu ? "is-open" : ""}`}>
         <a className="ls-dashboard-brand" href="/" aria-label="Lakshya Sparsh home">
-          <img src="/media/images/main-logo.png" alt="Lakshya Sparsh Financial Services" onError={(event) => { event.currentTarget.style.display = "none"; }} />
           <span className="ls-brand-fallback">LAKSHYA SPARSH<small>FINANCIAL SERVICES</small></span>
         </a>
         <div className="ls-sidebar-caption">CLIENT PORTAL</div>
         <nav className="ls-client-nav" aria-label="Client dashboard navigation">
           {menuItems.map((item) => (
-            <button key={item.id} className={`ls-nav-item ${activePage === item.id ? "active" : ""}`} onClick={() => choosePage(item.id)}>
+            <button key={item.id} className={`ls-nav-item ${activePage === item.id ? "active" : ""}`} aria-current={activePage === item.id ? "page" : undefined} onClick={() => choosePage(item.id)}>
               <span className="ls-nav-icon">{item.icon}</span><span>{item.label}</span>
               {activePage === item.id && <span className="ls-nav-active-mark" />}
             </button>
@@ -123,14 +115,14 @@ function ClientDashboard() {
 
       <main className="ls-client-main">
         <header className="ls-topbar">
-          <button className="ls-mobile-menu-button" onClick={() => setShowMobileMenu((value) => !value)} aria-label="Toggle menu">☰</button>
+          <button className="ls-mobile-menu-button" onClick={() => setShowMobileMenu((value) => !value)} aria-expanded={showMobileMenu} aria-label="Toggle menu">☰</button>
           <div className="ls-breadcrumb"><span>Client Portal</span><span className="ls-breadcrumb-separator">/</span><strong>{currentPage}</strong></div>
           <div className="ls-topbar-actions">
-            <button className="ls-topbar-icon" onClick={() => choosePage("transact")} aria-label="Transaction cart" title="Transaction cart">♧<span className="ls-cart-count">+</span></button>
+            <button className="ls-topbar-icon" onClick={() => choosePage("transact")} aria-label="Transaction cart" title="Transaction cart">♧</button>
             <div className="ls-alert-wrap"><button className={`ls-topbar-icon ${showAlerts ? "is-active" : ""}`} onClick={() => setShowAlerts((value) => !value)} aria-label="Notifications" title="Notifications">♧<span className="ls-notification-dot" /></button>
               {showAlerts && <div className="ls-alert-popover"><div className="ls-popover-heading"><strong>Alerts & reminders</strong><span>{portfolio?.alerts?.length || 0}</span></div>{(portfolio?.alerts || []).map((alert) => <div className="ls-alert-item" key={alert.id}><span className="ls-alert-bullet" /><div><strong>{alert.title}</strong><p>{alert.description}</p><small>{alert.date}</small></div></div>)}<button className="ls-view-all-alerts" onClick={() => { setShowAlerts(false); choosePage("risk"); }}>Review your profile</button></div>}
             </div>
-            <div className="ls-topbar-divider" />
+            <button className="ls-text-button" onClick={() => { setReportView("plans"); choosePage("portfolio"); }}>My SIP/STP</button><div className="ls-topbar-divider" />
             <button className="ls-user-menu" onClick={() => choosePage("account")}><span className="ls-avatar">{(user?.fullName || "C").trim().charAt(0).toUpperCase()}</span><span className="ls-user-copy"><strong>{user?.fullName || "Client"}</strong><small>Investor account</small></span><span className="ls-chevron">⌄</span></button>
           </div>
         </header>
@@ -142,12 +134,12 @@ function ClientDashboard() {
           {portfolio?.demo && <div className="ls-demo-banner"><span className="ls-demo-badge">DEMO DATA</span><span>This is sample portfolio information for development only. It is not your actual investment statement.</span></div>}
 
           {activePage === "home" && <HomePage portfolio={portfolio} summary={summary} onNavigate={choosePage} />}
-          {activePage === "portfolio" && <PortfolioPage holdings={filteredHoldings} search={search} setSearch={setSearch} />}
+          {activePage === "portfolio" && <PortfolioReports portfolio={portfolio} view={reportView} onView={setReportView} />}
           {activePage === "transact" && <TransactionRequestPage />}
           {activePage === "risk" && <InvestmentTargetsPage />}
           {activePage === "goals" && <InvestmentTargetsPage />}
-          {activePage === "tax" && <InfoPage icon="▤" title="My tax report" description="Tax statements and capital gains reports will appear here when verified investment records are connected." items={["Capital gains statement", "ELSS investment summary", "Financial year: 2026–27"]} action="Request tax assistance" />}
-          {activePage === "products" && <InfoPage icon="+" title="Explore investment products" description="Use this area to explore available investment categories. Transactions are not enabled in this demo portal." items={["Mutual funds", "Fixed deposits and bonds", "Systematic Investment Plans (SIP)"]} action="Contact an advisor" />}
+          {activePage === "tax" && <TaxReports onContact={() => choosePage("contact")} />}
+          {activePage === "products" && <InfoPage icon="+" title="Explore investment products" description="Use this area to explore available investment categories. Transactions are not enabled in this demo portal." items={["Mutual funds", "Fixed deposits and bonds", "Systematic Investment Plans (SIP)"]} action="Contact an advisor" onAction={() => choosePage("contact")} />}
           {activePage === "account" && <AccountPage user={user} />}
           {activePage === "contact" && <ContactPage />}
 
@@ -185,18 +177,8 @@ function HomePage({ portfolio, summary, onNavigate }) {
   </>;
 }
 
-function PortfolioPage({ holdings, search, setSearch }) {
-  const totalInvested = holdings.reduce((total, item) => total + item.invested, 0);
-  const totalCurrent = holdings.reduce((total, item) => total + item.current, 0);
-  return <><section className="ls-mini-summary"><div><span>Shown investments</span><strong>{holdings.length}</strong></div><div><span>Invested in results</span><strong>{money(totalInvested)}</strong></div><div><span>Current value in results</span><strong>{money(totalCurrent)}</strong></div></section><section className="ls-panel ls-full-panel"><div className="ls-panel-header ls-portfolio-tools"><div><h2>My investments</h2><p>Review your demo holdings and returns</p></div><label className="ls-search-field"><span>⌕</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search investments…" aria-label="Search investments" /></label></div><div className="ls-table-scroll"><table className="ls-data-table ls-portfolio-table"><thead><tr><th>Investment / Folio</th><th>Units</th><th>Invested amount</th><th>Current value</th><th>Gain / loss</th><th>Returns</th></tr></thead><tbody>{holdings.map((holding) => <tr key={holding.id}><td><div className="ls-fund-cell"><span className="ls-fund-icon">{holding.category.charAt(0)}</span><span><strong>{holding.name}</strong><small>{holding.id} · {holding.category}</small></span></div></td><td>{holding.units.toLocaleString("en-IN")}</td><td>{money(holding.invested)}</td><td><strong>{money(holding.current)}</strong></td><td className="ls-positive">+{money(holding.gain)}</td><td><span className="ls-return-pill">+{holding.gainPercent}%</span></td></tr>)}</tbody></table>{holdings.length === 0 && <div className="ls-empty-state">No investments match “{search}”. Try another search.</div>}</div></section><p className="ls-page-note">Demo holdings only. Values and returns are not linked to FinnSys or a live mutual fund platform.</p></>;
-}
-
-function TransactionsPage({ transactions }) {
-  return <section className="ls-panel ls-full-panel"><div className="ls-panel-header"><div><h2>Recent transactions</h2><p>Review your sample investment activity</p></div><span className="ls-period-pill">{transactions.length} records</span></div><div className="ls-table-scroll"><table className="ls-data-table"><thead><tr><th>Transaction ID</th><th>Date</th><th>Investment</th><th>Type</th><th>Amount</th><th>Status</th></tr></thead><tbody>{transactions.map((transaction) => <tr key={transaction.id}><td><strong>{transaction.id}</strong></td><td>{dateLabel(transaction.date)}</td><td>{transaction.fund}</td><td>{transaction.type}</td><td><strong>{money(transaction.amount)}</strong></td><td><span className="ls-status-pill">{transaction.status}</span></td></tr>)}</tbody></table></div><p className="ls-table-footnote">This is sample activity for the UI only. No real transaction can be placed from this screen.</p></section>;
-}
-
-function InfoPage({ icon, title, description, items, action }) {
-  return <section className="ls-panel ls-info-panel"><div className="ls-info-illustration">{icon}</div><div className="ls-info-copy"><span className="ls-section-eyebrow">LAKSHYA SPARSH SERVICES</span><h2>{title}</h2><p>{description}</p><div className="ls-info-list">{items.map((item) => <div key={item}><span>✓</span>{item}</div>)}</div><button className="ls-btn ls-btn-primary" onClick={() => window.alert("This demo action is not connected yet. Contact your Lakshya Sparsh advisor for assistance.")}>{action} <span>→</span></button><small className="ls-info-caption">This section is a UI preview and is not connected to live financial services.</small></div></section>;
+function InfoPage({ icon, title, description, items, action, onAction }) {
+  return <section className="ls-panel ls-info-panel"><div className="ls-info-illustration">{icon}</div><div className="ls-info-copy"><span className="ls-section-eyebrow">LAKSHYA SPARSH SERVICES</span><h2>{title}</h2><p>{description}</p><div className="ls-info-list">{items.map((item) => <div key={item}><span>✓</span>{item}</div>)}</div><button className="ls-btn ls-btn-primary" onClick={onAction}>{action} <span>→</span></button><small className="ls-info-caption">This section is a UI preview and is not connected to live financial services.</small></div></section>;
 }
 
 function AccountPage({ user }) {
