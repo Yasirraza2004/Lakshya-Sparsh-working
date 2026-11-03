@@ -1,0 +1,386 @@
+.new-investing-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* ============================= */
+/* Container */
+/* ============================= */
+
+.new-investing-container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* Hero Section */
+/* ============================= */
+
+.new-investing-hero {
+    width: 100%;
+    height: 172px;
+
+    background-image: url("/media/images/new-investing-banner.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.new-investing-hero-overlay {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.new-investing-hero .new-investing-container {
+    padding-left: 40px;
+}
+
+.new-investing-hero h1 {
+    margin: 0 0 5px;
+
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.new-investing-hero p {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ============================= */
+/* Main Content */
+/* ============================= */
+
+.new-investing-content-section {
+    width: 100%;
+    padding: 52px 0 55px;
+
+    background: #ffffff;
+}
+
+.new-investing-content-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+
+    gap: 48px;
+
+    align-items: start;
+}
+
+
+/* ============================= */
+/* Left Content */
+/* ============================= */
+
+.new-investing-main-content {
+    width: 100%;
+}
+
+.new-investing-main-content p {
+    margin: 0 0 18px;
+
+    color: #111111;
+
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 400;
+
+    text-align: left;
+}
+
+.new-investing-main-content p:first-child {
+    margin-bottom: 18px;
+}
+
+.new-investing-main-content strong {
+    font-weight: 700;
+}
+
+
+/* ============================= */
+/* List */
+/* ============================= */
+
+.new-investing-main-content ul {
+    margin: 4px 0 22px;
+    padding-left: 40px;
+}
+
+.new-investing-main-content li {
+    margin-bottom: 8px;
+
+    color: #111111;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* ============================= */
+/* Right Image */
+/* ============================= */
+
+.new-investing-sidebar {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.new-investing-card {
+    width: 100%;
+    max-width: 380px;
+
+    overflow: hidden;
+
+    border: 1px solid #cfcfcf;
+    background: #ffffff;
+
+    box-sizing: border-box;
+}
+
+.new-investing-card img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ============================= */
+/* Buttons */
+/* ============================= */
+
+.new-investing-buttons {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 32px;
+
+    margin-top: 18px;
+}
+
+.new-investing-button {
+    min-height: 49px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 5px;
+
+    background: #0868ad;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    line-height: 1.15;
+    font-weight: 400;
+
+    text-align: center;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.new-investing-button:hover {
+    background: #458ff0;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 18px rgba(69, 143, 240, 0.25);
+}
+
+.new-investing-button:active {
+    transform: translateY(0);
+}
+
+
+/* ============================= */
+/* Tablet */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+    .new-investing-container {
+        padding: 0 22px;
+    }
+
+    .new-investing-hero {
+        height: 160px;
+    }
+
+    .new-investing-hero .new-investing-container {
+        padding-left: 30px;
+    }
+
+    .new-investing-content-section {
+        padding: 40px 0 45px;
+    }
+
+    .new-investing-content-grid {
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 30px;
+    }
+
+    .new-investing-main-content p {
+        font-size: 15px;
+    }
+
+    .new-investing-main-content li {
+        font-size: 14px;
+    }
+
+    .new-investing-buttons {
+        gap: 15px;
+    }
+
+    .new-investing-button {
+        font-size: 14px;
+    }
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .new-investing-container {
+        padding: 0 18px;
+    }
+
+    .new-investing-hero {
+        height: 145px;
+
+        background-position: center;
+    }
+
+    .new-investing-hero .new-investing-container {
+        padding-left: 20px;
+    }
+
+    .new-investing-hero h1 {
+        font-size: 23px;
+    }
+
+    .new-investing-hero p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .new-investing-content-section {
+        padding: 32px 0 40px;
+    }
+
+    .new-investing-content-grid {
+        display: flex;
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .new-investing-main-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .new-investing-main-content ul {
+        padding-left: 28px;
+    }
+
+    .new-investing-main-content li {
+        font-size: 14px;
+    }
+
+    .new-investing-sidebar {
+        order: 2;
+    }
+
+    .new-investing-card {
+        max-width: 400px;
+    }
+
+    .new-investing-buttons {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-top: 22px;
+    }
+
+    .new-investing-button {
+        min-height: 52px;
+
+        font-size: 15px;
+    }
+}
+
+
+/* ============================= */
+/* Small Mobile */
+/* ============================= */
+
+@media (max-width: 450px) {
+
+    .new-investing-hero {
+        height: 130px;
+    }
+
+    .new-investing-hero h1 {
+        font-size: 21px;
+    }
+
+    .new-investing-hero p {
+        font-size: 11px;
+    }
+
+    .new-investing-main-content p {
+        font-size: 14px;
+    }
+
+    .new-investing-main-content li {
+        font-size: 13px;
+    }
+
+    .new-investing-button {
+        font-size: 14px;
+    }
+}

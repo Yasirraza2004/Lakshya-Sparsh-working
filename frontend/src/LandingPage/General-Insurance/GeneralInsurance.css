@@ -1,0 +1,479 @@
+/* =========================
+   MAIN PAGE
+========================= */
+
+.gi-page {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+
+/* =========================
+   HERO / BANNER
+========================= */
+
+.gi-hero {
+    background-image: url('/media/images/gi-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #2c3e50;
+
+    padding: 50px 10%;
+
+    color: white;
+
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gi-hero h1 {
+    font-size: 32px;
+    font-weight: 600;
+
+    margin: 0 0 10px 0;
+
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gi-hero p {
+    font-size: 14px;
+    margin: 0;
+
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gi-hero a {
+    color: white;
+    text-decoration: none;
+}
+
+.gi-hero a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   TOP DESCRIPTION
+========================= */
+
+.gi-top-desc {
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+    text-align: center;
+
+    padding: 0 20px;
+}
+
+.gi-top-desc p {
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #222;
+}
+
+
+/* =========================
+   TABS
+========================= */
+
+.gi-tabs-container {
+    width: 100%;
+
+    background-color: transparent;
+
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.gi-tabs {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    max-width: 1000px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.gi-tab-btn {
+    background-color: transparent;
+
+    color: #333;
+
+    border: none;
+
+    padding: 15px 25px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.gi-tab-btn.active {
+    background-color: #4a90e2;
+
+    color: white;
+
+    border-radius: 4px;
+}
+
+.gi-tab-btn:hover:not(.active) {
+    color: #4a90e2;
+}
+
+
+/* =========================
+   SPLIT SECTION
+========================= */
+
+.gi-split-section {
+    display: flex;
+
+    width: 100%;
+
+    background-color: white;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   LEFT BLUE FILL
+========================= */
+
+.gi-left-fill {
+    flex: 0.5;
+
+    background-color: #4a90e2;
+}
+
+
+/* =========================
+   CENTER CONTENT
+========================= */
+
+.gi-center-content {
+    width: 100%;
+
+    max-width: 1200px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.gi-sidebar {
+    width: 380px;
+
+    background-color: #4a90e2;
+
+    color: white;
+
+    padding: 50px 40px;
+
+    box-sizing: border-box;
+}
+
+.gi-sidebar h2 {
+    font-size: 32px;
+
+    font-weight: 600;
+
+    margin: 0 0 5px 0;
+
+    line-height: 1.2;
+}
+
+.gi-sidebar h2 span {
+    font-size: 22px;
+
+    font-weight: 400;
+}
+
+.gi-sidebar p {
+    font-size: 15px;
+
+    margin-bottom: 40px;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================
+   RIGHT WHITE FILL
+========================= */
+
+.gi-right-fill {
+    flex: 1;
+
+    background-color: white;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.gi-form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.floating-group {
+    position: relative;
+
+    margin-bottom: 35px;
+}
+
+.floating-input {
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+    color: white;
+
+    padding: 5px 0;
+
+    font-size: 16px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.floating-label {
+    position: absolute;
+
+    left: 0;
+
+    top: 5px;
+
+    color: white;
+
+    font-size: 15px;
+
+    pointer-events: none;
+
+    transition: 0.3s ease all;
+}
+
+
+/* =========================
+   FLOATING LABEL
+========================= */
+
+.floating-input:focus ~ .floating-label,
+.floating-input:valid ~ .floating-label {
+    top: -18px;
+
+    font-size: 12px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.floating-textarea {
+    resize: none;
+
+    min-height: 40px;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit-btn {
+    background-color: white;
+
+    color: #111;
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ffc107;
+
+    color: #111;
+}
+
+
+/* =========================
+   RIGHT CONTENT
+========================= */
+
+.gi-content {
+    width: calc(100% - 380px);
+
+    padding: 50px 60px;
+
+    background-color: white;
+
+    box-sizing: border-box;
+}
+
+.content-heading {
+    color: #4a90e2;
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+}
+
+.gi-content p {
+    font-size: 15px;
+
+    color: #333;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+    text-align: justify;
+}
+
+
+/* =========================
+   CORPORATE LIST
+========================= */
+
+.corporate-list {
+    list-style: none;
+
+    padding: 0;
+
+    margin-top: 20px;
+}
+
+.corporate-list li {
+    font-size: 15px;
+
+    color: #333;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   PRE-FOOTER
+========================= */
+
+.pre-footer-wrapper {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 40px auto 30px auto;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.pre-footer-links {
+    display: flex;
+
+    gap: 30px;
+}
+
+.pre-footer-links a {
+    color: #555;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.pre-footer-socials {
+    display: flex;
+
+    gap: 15px;
+
+    color: #999;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .gi-split-section {
+        flex-direction: column;
+    }
+
+    .gi-left-fill,
+    .gi-right-fill {
+        display: none;
+    }
+
+    .gi-sidebar {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .gi-content {
+        width: 100%;
+
+        padding: 30px 20px;
+    }
+}

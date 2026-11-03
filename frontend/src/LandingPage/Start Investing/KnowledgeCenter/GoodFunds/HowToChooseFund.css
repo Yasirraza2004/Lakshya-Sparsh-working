@@ -1,0 +1,252 @@
+.how-to-choose-fund-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #111111;
+}
+
+.how-to-choose-fund-container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+.how-to-choose-fund-hero {
+    width: 100%;
+    height: 172px;
+    background-image: url("/media/images/new-to-investing-banner.jpeg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.how-to-choose-fund-hero-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.how-to-choose-fund-hero .how-to-choose-fund-container {
+    padding-left: 40px;
+}
+
+.how-to-choose-fund-hero h1 {
+    margin: 0 0 5px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.how-to-choose-fund-hero p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.how-to-choose-fund-content-section {
+    width: 100%;
+    padding: 28px 0 45px;
+    background: #ffffff;
+}
+
+.how-to-choose-fund-top-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 35px;
+    align-items: start;
+}
+
+.how-to-choose-fund-video-section {
+    width: 100%;
+}
+
+.how-to-choose-fund-video {
+    width: 100%;
+    height: 320px;
+    background: #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+.how-to-choose-fund-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.how-to-choose-fund-testimonial {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.how-to-choose-fund-testimonial-image {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.how-to-choose-fund-person-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-to-choose-fund-person-placeholder span {
+    font-size: 22px;
+}
+
+.how-to-choose-fund-testimonial-content {
+    width: 100%;
+}
+
+.how-to-choose-fund-testimonial-content p {
+    margin: 0 0 10px;
+    color: #111111;
+    font-size: 13px;
+    line-height: 1.45;
+    text-align: left;
+}
+
+.how-to-choose-fund-author {
+    margin-top: 4px;
+    color: #1976b5;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.how-to-choose-fund-explanation {
+    width: 100%;
+    margin-top: 28px;
+}
+
+.how-to-choose-fund-explanation p {
+    margin: 0 0 6px;
+    color: #111111;
+    font-size: 13px;
+    line-height: 1.55;
+    text-align: left;
+}
+
+.how-to-choose-fund-explanation .how-to-choose-fund-heading {
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.how-to-choose-fund-explanation strong {
+    font-weight: 700;
+}
+
+.how-to-choose-fund-explanation ul {
+    margin: 4px 0 10px;
+    padding-left: 35px;
+}
+
+.how-to-choose-fund-explanation li {
+    margin-bottom: 4px;
+    color: #111111;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.how-to-choose-fund-navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-top: 2px;
+}
+
+.how-to-choose-fund-navigation-link {
+    color: #176ca5;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.how-to-choose-fund-navigation-link span {
+    font-size: 14px;
+}
+
+.how-to-choose-fund-navigation-link.left:hover {
+    color: #458ff0;
+    transform: translateX(-2px);
+}
+
+.how-to-choose-fund-navigation-link.right:hover {
+    color: #458ff0;
+    transform: translateX(2px);
+}
+
+@media (max-width: 992px) {
+    .how-to-choose-fund-container { padding: 0 22px; }
+    .how-to-choose-fund-hero { height: 160px; }
+    .how-to-choose-fund-hero .how-to-choose-fund-container { padding-left: 30px; }
+    .how-to-choose-fund-content-section { padding: 35px 0 45px; }
+    .how-to-choose-fund-top-grid { grid-template-columns: minmax(0, 1fr) 270px; gap: 28px; }
+    .how-to-choose-fund-video { height: 290px; }
+    .how-to-choose-fund-testimonial-content p { font-size: 12px; line-height: 1.5; }
+    .how-to-choose-fund-explanation p { font-size: 12px; }
+    .how-to-choose-fund-explanation li { font-size: 12px; }
+}
+
+@media (max-width: 700px) {
+    .how-to-choose-fund-container { padding: 0 18px; }
+    .how-to-choose-fund-hero { height: 145px; background-position: center; }
+    .how-to-choose-fund-hero .how-to-choose-fund-container { padding-left: 20px; }
+    .how-to-choose-fund-hero h1 { font-size: 23px; }
+    .how-to-choose-fund-hero p { font-size: 12px; line-height: 1.4; }
+    .how-to-choose-fund-content-section { padding: 30px 0 40px; }
+    .how-to-choose-fund-top-grid { display: flex; flex-direction: column; gap: 28px; }
+    .how-to-choose-fund-video { width: 100%; height: 240px; }
+    .how-to-choose-fund-video iframe { width: 100%; height: 100%; }
+    .how-to-choose-fund-testimonial { padding: 0 5px; }
+    .how-to-choose-fund-testimonial-image { width: 50px; height: 50px; }
+    .how-to-choose-fund-testimonial-content p { font-size: 14px; line-height: 1.55; text-align: left; }
+    .how-to-choose-fund-author { font-size: 14px; text-align: right; }
+    .how-to-choose-fund-explanation { margin-top: 30px; }
+    .how-to-choose-fund-explanation p { font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+    .how-to-choose-fund-explanation ul { padding-left: 25px; margin-top: 5px; }
+    .how-to-choose-fund-explanation li { font-size: 14px; line-height: 1.55; margin-bottom: 8px; }
+    .how-to-choose-fund-navigation { margin-top: 20px; padding-top: 5px; }
+    .how-to-choose-fund-navigation-link { font-size: 13px; }
+}
+
+@media (max-width: 450px) {
+    .how-to-choose-fund-hero { height: 130px; }
+    .how-to-choose-fund-hero h1 { font-size: 21px; }
+    .how-to-choose-fund-hero p { font-size: 11px; }
+    .how-to-choose-fund-video { height: 210px; }
+    .how-to-choose-fund-testimonial-content p { font-size: 13px; line-height: 1.55; }
+    .how-to-choose-fund-explanation p { font-size: 13px; line-height: 1.6; }
+    .how-to-choose-fund-explanation li { font-size: 13px; line-height: 1.55; }
+    .how-to-choose-fund-navigation-link { font-size: 12px; }
+}

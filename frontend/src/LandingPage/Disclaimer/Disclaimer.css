@@ -1,0 +1,231 @@
+.disclaimer-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.disclaimer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.disclaimer-hero {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    background-image: url("/media/images/disclaimer-banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.disclaimer-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.disclaimer-hero-overlay {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.disclaimer-hero h1 {
+    margin: 0 0 8px 0;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.disclaimer-hero p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.disclaimer-content {
+    width: 100%;
+    background: #ffffff;
+    padding: 32px 0 60px 0;
+}
+
+.disclaimer-content p {
+    margin: 0 0 18px 0;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #111111;
+}
+
+.disclaimer-content h2 {
+    margin: 28px 0 18px 0;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #111111;
+}
+
+.disclaimer-content ol {
+    margin: 0 0 20px 0;
+    padding-left: 38px;
+}
+
+.disclaimer-content ol li {
+    margin-bottom: 18px;
+    padding-left: 3px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #111111;
+}
+
+.disclaimer-content ul {
+    margin: -5px 0 22px 0;
+    padding-left: 55px;
+}
+
+.disclaimer-content ul li {
+    margin-bottom: 16px;
+    padding-left: 3px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #111111;
+}
+
+
+/* ================================
+   SPECIAL TEXT
+================================ */
+
+.disclaimer-red {
+    color: red;
+    font-weight: 600;
+}
+
+.disclaimer-content a {
+    color: #458ff0;
+    text-decoration: underline;
+}
+
+.disclaimer-content a:hover {
+    color: #2874d1;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+
+    .disclaimer-container {
+        max-width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .disclaimer-hero {
+        height: 150px;
+    }
+
+    .disclaimer-hero h1 {
+        font-size: 25px;
+    }
+
+    .disclaimer-hero p {
+        font-size: 15px;
+    }
+
+    .disclaimer-content {
+        padding-top: 28px;
+    }
+
+    .disclaimer-content p,
+    .disclaimer-content ol li,
+    .disclaimer-content ul li {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .disclaimer-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .disclaimer-hero {
+        height: 135px;
+    }
+
+    .disclaimer-hero h1 {
+        font-size: 21px;
+    }
+
+    .disclaimer-hero p {
+        font-size: 14px;
+    }
+
+    .disclaimer-content {
+        padding: 25px 0 45px 0;
+    }
+
+    .disclaimer-content p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .disclaimer-content h2 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .disclaimer-content ol {
+        padding-left: 30px;
+    }
+
+    .disclaimer-content ol li {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .disclaimer-content ul {
+        padding-left: 42px;
+    }
+
+    .disclaimer-content ul li {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 14px;
+    }
+}

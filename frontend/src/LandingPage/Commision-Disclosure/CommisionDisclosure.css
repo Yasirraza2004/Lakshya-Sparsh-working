@@ -1,0 +1,336 @@
+.commission-disclosure-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =================================
+   CONTAINER
+================================= */
+
+.commission-disclosure-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.commission-disclosure-hero {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    background-image: url("/media/images/disclosure-banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.commission-disclosure-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.commission-disclosure-hero-overlay {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+.commission-disclosure-hero h1 {
+    margin: 0 0 8px 0;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.commission-disclosure-hero p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.commission-disclosure-content {
+    width: 100%;
+    background: #ffffff;
+    padding: 32px 0 55px 0;
+}
+
+.commission-disclosure-content p {
+    margin: 0 0 18px 0;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #111111;
+}
+
+
+/* =================================
+   COMMISSION TABLE
+================================= */
+
+.commission-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 10px;
+    margin-bottom: 22px;
+    border-radius: 7px;
+}
+
+.commission-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 7px;
+
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* Table Header */
+
+.commission-table thead th {
+    padding: 17px 12px;
+
+    background: #458ff0;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border: none;
+}
+
+
+/* Darker alternating header cells
+   to match the screenshot */
+
+.commission-table thead th:nth-child(2),
+.commission-table thead th:nth-child(4) {
+    background: #2162ad;
+}
+
+
+/* First header cell */
+
+.commission-table thead th:first-child {
+    border-top-left-radius: 7px;
+}
+
+
+/* Last header cell */
+
+.commission-table thead th:last-child {
+    border-top-right-radius: 7px;
+}
+
+
+/* Table Body */
+
+.commission-table tbody td {
+    padding: 17px 12px;
+
+    color: #111111;
+    font-size: 16px;
+    line-height: 1.4;
+
+    border: none;
+}
+
+
+/* Alternating rows */
+
+.commission-table tbody tr:nth-child(odd) td {
+    background: #f3f3f3;
+}
+
+.commission-table tbody tr:nth-child(even) td {
+    background: #e5e5e5;
+}
+
+
+/* Rounded bottom corners */
+
+.commission-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 7px;
+}
+
+.commission-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 7px;
+}
+
+
+/* =================================
+   LIST
+================================= */
+
+.commission-disclosure-list {
+    margin: 15px 0 20px 0;
+    padding-left: 40px;
+}
+
+.commission-disclosure-list li {
+    margin-bottom: 18px;
+    padding-left: 3px;
+
+    font-size: 16px;
+    line-height: 1.55;
+    color: #111111;
+}
+
+
+/* =================================
+   CONTACT / BOLD TEXT
+================================= */
+
+.commission-disclosure-contact {
+    font-weight: 700 !important;
+    margin-top: 8px !important;
+}
+
+
+/* =================================
+   RESPONSIVE - TABLET
+================================= */
+
+@media (max-width: 992px) {
+
+    .commission-disclosure-container {
+        max-width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .commission-disclosure-hero {
+        height: 150px;
+    }
+
+    .commission-disclosure-hero h1 {
+        font-size: 25px;
+    }
+
+    .commission-disclosure-hero p {
+        font-size: 15px;
+    }
+
+    .commission-disclosure-content {
+        padding-top: 28px;
+    }
+
+    .commission-disclosure-content p {
+        font-size: 15px;
+    }
+
+    .commission-disclosure-list li {
+        font-size: 15px;
+    }
+
+    .commission-table {
+        font-size: 15px;
+    }
+
+    .commission-table thead th {
+        font-size: 15px;
+        padding: 15px 10px;
+    }
+
+    .commission-table tbody td {
+        font-size: 15px;
+        padding: 15px 10px;
+    }
+}
+
+
+/* =================================
+   RESPONSIVE - MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .commission-disclosure-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .commission-disclosure-hero {
+        height: 135px;
+    }
+
+    .commission-disclosure-hero h1 {
+        font-size: 21px;
+    }
+
+    .commission-disclosure-hero p {
+        font-size: 14px;
+    }
+
+    .commission-disclosure-content {
+        padding: 25px 0 45px 0;
+    }
+
+    .commission-disclosure-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .commission-disclosure-list {
+        padding-left: 30px;
+    }
+
+    .commission-disclosure-list li {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    /*
+       The table remains wide so that
+       it doesn't become unreadable.
+       It can be horizontally scrolled.
+    */
+
+    .commission-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .commission-table {
+        min-width: 800px;
+        font-size: 14px;
+    }
+
+    .commission-table thead th {
+        font-size: 14px;
+        padding: 14px 10px;
+    }
+
+    .commission-table tbody td {
+        font-size: 14px;
+        padding: 14px 10px;
+    }
+}

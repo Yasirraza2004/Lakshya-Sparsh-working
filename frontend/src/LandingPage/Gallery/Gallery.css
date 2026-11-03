@@ -1,0 +1,291 @@
+/* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery-section {
+    width: 100%;
+    padding: 45px 0 60px;
+    background: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.gallery-title {
+    margin: 0 0 40px;
+    text-align: center;
+    color: #458ff0;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.gallery-container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* =========================
+   SWIPER
+========================= */
+
+.gallery-swiper {
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+}
+
+.gallery-swiper .swiper-wrapper {
+    height: 100%;
+}
+
+.gallery-swiper .swiper-slide {
+    width: 100% !important;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   SLIDE
+========================= */
+
+.gallery-slide {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #000000;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    /*
+       cover removes the empty
+       side spaces and fills
+       the complete gallery.
+    */
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 20;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 38px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.5);
+
+    transition: 0.25s ease;
+}
+
+
+/* =========================
+   PREVIOUS
+========================= */
+
+.gallery-prev {
+    left: 10px;
+}
+
+
+/* =========================
+   NEXT
+========================= */
+
+.gallery-next {
+    right: 10px;
+}
+
+
+/* =========================
+   ARROW HOVER
+========================= */
+
+.gallery-prev:hover,
+.gallery-next:hover {
+    transform: translateY(-50%) scale(1.15);
+    color: #ffffff;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.gallery-swiper .swiper-pagination {
+    bottom: 15px;
+}
+
+
+/* Pagination dots */
+
+.gallery-swiper .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+
+    background: #ffffff;
+
+    opacity: 0.7;
+}
+
+
+/* Active dot */
+
+.gallery-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .gallery-container {
+        width: 90%;
+    }
+
+    .gallery-swiper {
+        height: 500px;
+    }
+
+    .gallery-title {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .gallery-section {
+        padding: 35px 0 50px;
+    }
+
+    .gallery-title {
+        margin-bottom: 25px;
+        font-size: 27px;
+    }
+
+    .gallery-container {
+        width: 94%;
+    }
+
+    .gallery-swiper {
+        height: 400px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 40px;
+        height: 40px;
+        font-size: 28px;
+    }
+
+    .gallery-prev {
+        left: 2px;
+    }
+
+    .gallery-next {
+        right: 2px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .gallery-section {
+        padding: 30px 0 40px;
+    }
+
+    .gallery-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .gallery-swiper {
+        height: 300px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+    }
+
+    .gallery-prev {
+        left: 0;
+    }
+
+    .gallery-next {
+        right: 0;
+    }
+}

@@ -1,0 +1,491 @@
+/* =========================
+   PAGE
+========================= */
+
+.life-insurance-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+
+/* =========================
+   TOP BANNER
+========================= */
+
+.life-insurance-banner {
+    width: 100%;
+    height: 172px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(8, 33, 58, 0.30),
+            rgba(8, 33, 58, 0.10)
+        ),
+        url("/media/images/li-banner.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* Banner content */
+
+.life-insurance-banner-content {
+    width: 74%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+.life-insurance-banner-text {
+    display: inline-block;
+}
+
+
+.life-insurance-banner-content h1 {
+    margin: 0 0 7px;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+
+.life-insurance-banner-content p {
+    margin: 0;
+
+    font-size: 16px;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.life-insurance-section {
+    width: 100%;
+
+    background: #ffffff;
+}
+
+
+.life-insurance-container {
+    width: 100%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 31.5% 68.5%;
+}
+
+
+/* =========================
+   LEFT FORM
+========================= */
+
+.life-insurance-form {
+    background: #458ff0;
+
+    min-height: 525px;
+
+    padding: 26px 42px 35px;
+
+    box-sizing: border-box;
+}
+
+
+.life-insurance-form h2 {
+    margin: 0 0 2px;
+
+    color: #ffffff;
+
+    font-size: 31px;
+
+    line-height: 0.98;
+
+    font-weight: 700;
+}
+
+
+.life-insurance-form h2 span {
+    font-size: 19px;
+
+    font-weight: 500;
+}
+
+
+.life-insurance-form h3 {
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 1.05;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.life-insurance-form form {
+    width: 100%;
+}
+
+
+.life-insurance-form input,
+.life-insurance-form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-bottom: 1px solid #ffffff;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    padding: 10px 5px;
+
+    margin-bottom: 3px;
+
+    font-family: inherit;
+}
+
+
+.life-insurance-form input::placeholder,
+.life-insurance-form textarea::placeholder {
+    color: #ffffff;
+
+    opacity: 1;
+}
+
+
+.life-insurance-form input:focus,
+.life-insurance-form textarea:focus {
+    border-bottom: 2px solid #ffffff;
+}
+
+
+.life-insurance-form textarea {
+    height: 68px;
+
+    resize: vertical;
+
+    margin-bottom: 23px;
+}
+
+
+/* =========================
+   FORM BUTTON
+========================= */
+
+.life-insurance-form button {
+    width: 100%;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    padding: 9px 15px;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.life-insurance-form button:hover {
+    background: #f2f2f2;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   RIGHT CONTENT
+========================= */
+
+.life-insurance-content {
+    padding: 20px 45px 55px 16px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+}
+
+
+.life-insurance-content h2 {
+    margin: 0 0 7px;
+
+    color: #458ff0;
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+.life-insurance-content h3 {
+    margin: 9px 0 7px;
+
+    color: #458ff0;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+.life-insurance-content p {
+    margin: 0 0 13px;
+
+    color: #111111;
+
+    font-size: 16px;
+
+    line-height: 1.48;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   LIC IMAGE
+========================= */
+
+.lic-image-container {
+    display: inline-block;
+
+    margin: 2px 0 10px;
+
+    padding: 3px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* Clickable link */
+
+.lic-image-container a {
+    display: block;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+
+/* LIC image */
+
+.lic-image-container img {
+    display: block;
+
+    width: 200px;
+
+    height: auto;
+
+    max-width: 100%;
+
+    transition: 0.3s ease;
+}
+
+
+/* Hover effect */
+
+.lic-image-container:hover img {
+    transform: scale(1.04);
+
+    opacity: 0.9;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .life-insurance-banner-content {
+        width: 88%;
+    }
+
+
+    .life-insurance-container {
+        grid-template-columns: 35% 65%;
+    }
+
+
+    .life-insurance-form {
+        padding: 25px 28px 30px;
+    }
+
+
+    .life-insurance-form h2 {
+        font-size: 27px;
+    }
+
+
+    .life-insurance-form h3 {
+        font-size: 16px;
+    }
+
+
+    .life-insurance-content {
+        padding: 25px 30px 45px 20px;
+    }
+
+
+    .life-insurance-content h2 {
+        font-size: 22px;
+    }
+
+
+    .life-insurance-content h3 {
+        font-size: 19px;
+    }
+
+
+    .life-insurance-content p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .life-insurance-banner {
+        height: 160px;
+
+        background-position: center;
+    }
+
+
+    .life-insurance-banner-content {
+        width: 90%;
+    }
+
+
+    .life-insurance-banner-content h1 {
+        font-size: 27px;
+    }
+
+
+    .life-insurance-banner-content p {
+        font-size: 15px;
+    }
+
+
+    .life-insurance-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .life-insurance-form {
+        min-height: auto;
+
+        padding: 30px 25px 35px;
+    }
+
+
+    .life-insurance-form h2 {
+        font-size: 29px;
+    }
+
+
+    .life-insurance-form h3 {
+        font-size: 17px;
+
+        line-height: 1.1;
+
+        margin-bottom: 25px;
+    }
+
+
+    .life-insurance-form input,
+    .life-insurance-form textarea {
+        font-size: 15px;
+    }
+
+
+    .life-insurance-content {
+        padding: 30px 25px 45px;
+    }
+
+
+    .life-insurance-content h2 {
+        font-size: 22px;
+    }
+
+
+    .life-insurance-content h3 {
+        font-size: 19px;
+    }
+
+
+    .life-insurance-content p {
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+
+    .lic-image-container {
+        width: auto;
+
+        max-width: 100%;
+    }
+
+
+    .lic-image-container img {
+        width: 200px;
+
+        max-width: 100%;
+    }
+
+}

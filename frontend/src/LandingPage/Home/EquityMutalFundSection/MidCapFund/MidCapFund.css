@@ -1,0 +1,342 @@
+/* =========================
+   PAGE
+========================= */
+
+.mid-cap-page {
+    width: 100%;
+
+    min-height: 100vh;
+
+    background: #ffffff;
+}
+
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.mid-cap-section {
+    width: 100%;
+
+    padding: 76px 0 70px;
+
+    background: #ffffff;
+}
+
+
+.mid-cap-container {
+    width: 74%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.mid-cap-title {
+    margin: 0 0 36px;
+
+    text-align: center;
+
+    color: #111;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.mid-cap-features {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    gap: 45px;
+
+    margin-bottom: 28px;
+}
+
+
+.mid-cap-feature {
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================
+   FEATURE IMAGE
+========================= */
+
+.mid-feature-image {
+    width: 90px;
+
+    height: 72px;
+
+    margin-bottom: 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.mid-feature-image img {
+    max-width: 90px;
+
+    max-height: 72px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   FEATURE TEXT
+========================= */
+
+.mid-cap-feature p {
+    margin: 0;
+
+    color: #222;
+
+    font-size: 21px;
+
+    font-weight: 400;
+
+    line-height: 1.12;
+
+    text-align: center;
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.mid-cap-benefits {
+    width: 100%;
+
+    margin-top: 13px;
+}
+
+
+.mid-cap-benefits h3 {
+    margin: 0 0 20px;
+
+    color: #111;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.mid-benefit-icon {
+    display: inline-block;
+
+    margin-right: 7px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   BENEFITS LIST
+========================= */
+
+.mid-cap-benefits ul {
+    margin: 0;
+
+    padding-left: 30px;
+}
+
+
+.mid-cap-benefits li {
+    margin-bottom: 2px;
+
+    color: #222;
+
+    font-size: 19px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================
+   INVEST BUTTON
+========================= */
+
+.mid-cap-button {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 43px;
+}
+
+
+.mid-cap-button button {
+    border: none;
+
+    background: #458ff0;
+
+    color: #ffffff;
+
+    padding: 14px 20px;
+
+    min-width: 115px;
+
+    border-radius: 4px;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.mid-cap-button button:hover {
+    background: #347ddc;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px
+        rgba(69, 143, 240, 0.25);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .mid-cap-container {
+        width: 88%;
+    }
+
+
+    .mid-cap-section {
+        padding-top: 55px;
+    }
+
+
+    .mid-cap-features {
+        gap: 25px;
+    }
+
+
+    .mid-cap-feature p {
+        font-size: 18px;
+    }
+
+
+    .mid-cap-benefits li {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .mid-cap-section {
+        padding: 40px 0 50px;
+    }
+
+
+    .mid-cap-container {
+        width: 90%;
+    }
+
+
+    .mid-cap-title {
+        font-size: 27px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .mid-cap-features {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .mid-cap-feature p {
+        font-size: 18px;
+
+        line-height: 1.25;
+    }
+
+
+    .mid-cap-benefits {
+        margin-top: 10px;
+    }
+
+
+    .mid-cap-benefits h3 {
+        font-size: 17px;
+
+        line-height: 1.4;
+    }
+
+
+    .mid-cap-benefits ul {
+        padding-left: 25px;
+    }
+
+
+    .mid-cap-benefits li {
+        font-size: 16px;
+
+        line-height: 1.4;
+
+        margin-bottom: 7px;
+    }
+
+
+    .mid-cap-button {
+        margin-top: 35px;
+    }
+
+
+    .mid-cap-button button {
+        width: 100%;
+
+        max-width: 200px;
+    }
+
+}

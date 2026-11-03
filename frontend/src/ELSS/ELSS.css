@@ -1,0 +1,930 @@
+* {
+    box-sizing: border-box;
+}
+
+.elss-page {
+    background: #f7f9fc;
+    min-height: 100vh;
+    color: #1f2937;
+    padding-bottom: 80px;
+}
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.breadcrumb {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 25px 0 15px;
+
+    font-size: 15px;
+    color: #6b7280;
+}
+
+.breadcrumb span {
+    margin: 0 8px;
+    color: #458ff0;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.elss-hero {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 0 auto 35px;
+
+    padding: 55px 60px;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #458ff0,
+        #3178d7
+    );
+
+    color: white;
+
+    box-shadow: 0 10px 30px rgba(69, 143, 240, 0.18);
+}
+
+.hero-small {
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.85;
+}
+
+.elss-hero h1 {
+    margin: 12px 0;
+
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.elss-hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    opacity: 0.92;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.elss-container {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.top-controls {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+.search-box {
+    width: 500px;
+
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    background: white;
+
+    border: 1px solid #e1e5eb;
+
+    border-radius: 8px;
+}
+
+.search-box span {
+    font-size: 18px;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 15px;
+
+    color: #333;
+}
+
+
+/* =========================
+   INVESTMENT SWITCH
+========================= */
+
+.investment-switch {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    background: white;
+
+    padding: 5px;
+
+    border-radius: 9px;
+
+    border: 1px solid #e1e5eb;
+}
+
+.investment-switch span {
+    padding: 0 12px;
+
+    font-size: 14px;
+
+    color: #666;
+}
+
+.investment-switch button {
+    border: none;
+
+    background: transparent;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    color: #555;
+}
+
+.investment-switch button.active {
+    background: #458ff0;
+
+    color: white;
+}
+
+
+/* =========================
+   INFO CARDS
+========================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+.info-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e9edf3;
+}
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #edf5ff;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+}
+
+.info-card h3 {
+    margin: 0 0 5px;
+
+    font-size: 16px;
+}
+
+.info-card p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #737b88;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content-layout {
+    display: grid;
+
+    grid-template-columns: 230px 1fr;
+
+    gap: 25px;
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+.filter-panel {
+    height: fit-content;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e6eaf0;
+}
+
+.filter-panel h3 {
+    margin: 0 0 25px;
+
+    font-size: 18px;
+}
+
+.filter-section {
+    padding: 20px 0;
+
+    border-top: 1px solid #edf0f4;
+}
+
+.filter-section h4 {
+    margin: 0 0 14px;
+
+    font-size: 14px;
+}
+
+.filter-section label {
+    display: block;
+
+    margin: 12px 0;
+
+    font-size: 14px;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+.filter-section input {
+    margin-right: 9px;
+}
+
+
+/* =========================
+   FUND HEADING
+========================= */
+
+.fund-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.fund-heading h2 {
+    margin: 0;
+
+    font-size: 23px;
+}
+
+.fund-heading p {
+    margin: 5px 0 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.sort-text {
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FUND CARD
+========================= */
+
+.fund-card {
+    background: white;
+
+    border: 1px solid #e5e9ef;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    margin-bottom: 18px;
+
+    transition: 0.25s;
+}
+
+.fund-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.fund-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.fund-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.fund-logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #edf5ff;
+
+    color: #458ff0;
+
+    border-radius: 8px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.fund-title h3 {
+    margin: 0 0 5px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+.fund-title p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #7a808b;
+}
+
+.risk {
+    background: #fff4df;
+
+    color: #d88900;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   FUND STATS
+========================= */
+
+.fund-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin: 25px 0;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #edf0f3;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.fund-stats span {
+    display: block;
+
+    color: #888;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+.fund-stats strong {
+    font-size: 17px;
+}
+
+.positive {
+    color: #159447 !important;
+}
+
+
+/* =========================
+   FUND FOOTER
+========================= */
+
+.fund-footer {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 12px;
+}
+
+.investment-input {
+    flex: 1;
+}
+
+.investment-input > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+.investment-input div {
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 12px;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 6px;
+
+    color: #555;
+}
+
+.investment-input input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    padding-left: 5px;
+
+    font-size: 14px;
+}
+
+.invest-btn,
+.compare-btn {
+    height: 42px;
+
+    padding: 0 22px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.invest-btn {
+    border: none;
+
+    background: #458ff0;
+
+    color: white;
+}
+
+.invest-btn:hover {
+    background: #347bd8;
+}
+
+.compare-btn {
+    border: 1px solid #458ff0;
+
+    background: white;
+
+    color: #458ff0;
+}
+
+.compare-btn.selected {
+    background: #458ff0;
+
+    color: white;
+}
+
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 35px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e9ef;
+}
+
+.calculator-left {
+    padding: 45px;
+}
+
+.calculator-label {
+    color: #458ff0;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.calculator-left h2 {
+    margin: 10px 0;
+
+    font-size: 30px;
+}
+
+.calculator-left > p {
+    color: #777;
+
+    margin-bottom: 35px;
+}
+
+.calc-group {
+    margin-bottom: 25px;
+}
+
+.calc-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.range-value {
+    color: #458ff0;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.calc-group input[type="range"] {
+    width: 100%;
+
+    accent-color: #458ff0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   CALCULATOR RESULT
+========================= */
+
+.calculator-result {
+    background: #458ff0;
+
+    color: white;
+
+    padding: 45px;
+}
+
+.calculator-result h3 {
+    margin-top: 0;
+
+    font-size: 18px;
+
+    font-weight: 500;
+}
+
+.result-main {
+    padding: 25px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.result-main span {
+    display: block;
+
+    font-size: 13px;
+
+    opacity: 0.8;
+
+    margin-bottom: 8px;
+}
+
+.result-main strong {
+    font-size: 35px;
+}
+
+.result-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+    font-size: 14px;
+}
+
+.result-row strong {
+    color: white !important;
+}
+
+.start-btn {
+    width: 100%;
+
+    margin-top: 30px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #f5a900;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    background: #df9700;
+}
+
+
+/* =========================
+   COMPARISON
+========================= */
+
+.comparison {
+    margin-top: 40px;
+
+    background: white;
+
+    border: 1px solid #e5e9ef;
+
+    border-radius: 12px;
+
+    padding: 30px;
+}
+
+.comparison-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.comparison-header h2 {
+    margin: 0;
+}
+
+.comparison-header p {
+    margin: 5px 0 0;
+
+    color: #777;
+}
+
+.comparison-header > span {
+    color: #458ff0;
+
+    font-weight: 600;
+}
+
+.comparison-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.comparison-item {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    border: 1px solid #edf0f3;
+
+    border-radius: 7px;
+}
+
+.comparison-item span {
+    font-size: 14px;
+}
+
+.comparison-item button {
+    border: none;
+
+    background: transparent;
+
+    color: #e34b4b;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-panel {
+        display: none;
+    }
+
+    .calculator {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .elss-container,
+    .breadcrumb,
+    .elss-hero {
+        width: 94%;
+    }
+
+    .elss-hero {
+        padding: 35px 25px;
+    }
+
+    .elss-hero h1 {
+        font-size: 30px;
+    }
+
+    .elss-hero p {
+        font-size: 15px;
+    }
+
+    .top-controls {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .investment-switch {
+        justify-content: space-between;
+    }
+
+    .investment-switch span {
+        display: none;
+    }
+
+    .fund-header {
+        flex-direction: column;
+    }
+
+    .fund-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .fund-footer {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .calculator-left,
+    .calculator-result {
+        padding: 30px 22px;
+    }
+
+    .calculator-left h2 {
+        font-size: 25px;
+    }
+
+    .comparison {
+        padding: 20px;
+    }
+
+    .comparison-item {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+}

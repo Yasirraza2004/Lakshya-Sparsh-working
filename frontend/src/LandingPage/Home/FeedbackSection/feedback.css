@@ -1,0 +1,202 @@
+/* =========================
+   MAIN SECTION
+========================= */
+
+.feedback-section {
+    min-height: 600px;
+
+    background-color: #182129;
+
+    color: white;
+
+    padding: 70px 8%;
+
+    text-align: center;
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.feedback-title {
+    font-size: 45px;
+
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.feedback-subtitle {
+    font-size: 20px;
+
+    margin-bottom: 65px;
+}
+
+
+/* =========================
+   REVIEW AREA
+========================= */
+
+.feedback-review-area {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    min-height: 330px;
+}
+
+
+/* =========================
+   REVIEW
+========================= */
+
+.feedback-review {
+    transition: opacity 0.5s ease;
+}
+
+
+/* =========================
+   REVIEW TITLE
+========================= */
+
+.feedback-review-title {
+    text-align: left;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   REVIEW TEXT
+========================= */
+
+.feedback-review-text {
+    text-align: left;
+
+    font-size: 20px;
+
+    line-height: 1.45;
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   LINE
+========================= */
+
+.feedback-line {
+    border: none;
+
+    border-top: 1px solid white;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   REVIEW NAME
+========================= */
+
+.feedback-review-name {
+    text-align: left;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.feedback-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 70px;
+
+    font-weight: 200;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    padding: 0;
+}
+
+
+/* LEFT ARROW */
+
+.feedback-arrow-left {
+    left: -60px;
+}
+
+
+/* RIGHT ARROW */
+
+.feedback-arrow-right {
+    right: -60px;
+}
+
+
+/* =========================
+   FEEDBACK BUTTON
+========================= */
+
+.btn-feedback {
+    display: inline-block;
+
+    background-color: #ffbd17;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 15px 35px;
+
+    font-size: 18px;
+
+    margin-top: 20px;
+
+    text-decoration: none;
+
+    color: black;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.btn-feedback:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,619 @@
+.understanding-risk-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #ffffff;
+
+    color: #111111;
+}
+
+
+/* ============================= */
+/* Container */
+/* ============================= */
+
+.understanding-risk-container {
+    width: 100%;
+    max-width: 1220px;
+
+    margin: 0 auto;
+
+    padding: 0 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* Hero Section */
+/* ============================= */
+
+.understanding-risk-hero {
+    width: 100%;
+    height: 172px;
+
+    background-image: url("/media/images/new-to-investing-banner.jpeg");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.understanding-risk-hero-overlay {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+.understanding-risk-hero
+.understanding-risk-container {
+    padding-left: 40px;
+}
+
+
+.understanding-risk-hero h1 {
+    margin: 0 0 5px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+
+.understanding-risk-hero p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ============================= */
+/* Main Content */
+/* ============================= */
+
+.understanding-risk-content-section {
+    width: 100%;
+
+    padding: 28px 0 45px;
+
+    background: #ffffff;
+}
+
+
+/* ============================= */
+/* Top Grid */
+/* ============================= */
+
+.understanding-risk-top-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        300px;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* ============================= */
+/* Video Section */
+/* ============================= */
+
+.understanding-risk-video-section {
+    width: 100%;
+}
+
+
+.understanding-risk-video {
+    width: 100%;
+
+    height: 320px;
+
+    background: #000000;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.understanding-risk-video iframe {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    display: block;
+}
+
+
+/* ============================= */
+/* Testimonial */
+/* ============================= */
+
+.understanding-risk-testimonial {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.understanding-risk-testimonial-image {
+    width: 45px;
+
+    height: 45px;
+
+    margin-bottom: 8px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+}
+
+
+.understanding-risk-person-placeholder {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.understanding-risk-person-placeholder span {
+    font-size: 22px;
+}
+
+
+.understanding-risk-testimonial-content {
+    width: 100%;
+}
+
+
+.understanding-risk-testimonial-content p {
+    margin: 0 0 10px;
+
+    color: #111111;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    text-align: left;
+}
+
+
+.understanding-risk-author {
+    margin-top: 4px;
+
+    color: #1976b5;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+/* ============================= */
+/* Risk Explanation */
+/* ============================= */
+
+.understanding-risk-explanation {
+    width: 100%;
+
+    margin-top: 28px;
+}
+
+
+.understanding-risk-explanation p {
+    margin: 0 0 6px;
+
+    color: #111111;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    text-align: left;
+}
+
+
+.understanding-risk-explanation
+.understanding-risk-heading {
+    margin-top: 2px;
+
+    margin-bottom: 2px;
+}
+
+
+.understanding-risk-explanation strong {
+    font-weight: 700;
+}
+
+
+/* ============================= */
+/* Risk List */
+/* ============================= */
+
+.understanding-risk-explanation ul {
+    margin: 4px 0 0;
+
+    padding-left: 35px;
+}
+
+
+.understanding-risk-explanation li {
+    margin-bottom: 4px;
+
+    color: #111111;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+}
+
+
+/* ============================= */
+/* Navigation */
+/* ============================= */
+
+.understanding-risk-navigation {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 14px;
+
+    padding-top: 2px;
+}
+
+
+.understanding-risk-navigation-link {
+    color: #176ca5;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.understanding-risk-navigation-link span {
+    font-size: 14px;
+}
+
+
+.understanding-risk-navigation-link.left:hover {
+    color: #458ff0;
+
+    transform: translateX(-2px);
+}
+
+
+.understanding-risk-navigation-link.right:hover {
+    color: #458ff0;
+
+    transform: translateX(2px);
+}
+
+
+/* ============================= */
+/* Tablet */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+    .understanding-risk-container {
+        padding: 0 22px;
+    }
+
+
+    .understanding-risk-hero {
+        height: 160px;
+    }
+
+
+    .understanding-risk-hero
+    .understanding-risk-container {
+        padding-left: 30px;
+    }
+
+
+    .understanding-risk-content-section {
+        padding: 35px 0 45px;
+    }
+
+
+    .understanding-risk-top-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            270px;
+
+        gap: 28px;
+    }
+
+
+    .understanding-risk-video {
+        height: 290px;
+    }
+
+
+    .understanding-risk-testimonial-content p {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+
+    .understanding-risk-explanation p {
+        font-size: 12px;
+    }
+
+
+    .understanding-risk-explanation li {
+        font-size: 12px;
+    }
+
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .understanding-risk-container {
+        padding: 0 18px;
+    }
+
+
+    .understanding-risk-hero {
+        height: 145px;
+
+        background-position: center;
+    }
+
+
+    .understanding-risk-hero
+    .understanding-risk-container {
+        padding-left: 20px;
+    }
+
+
+    .understanding-risk-hero h1 {
+        font-size: 23px;
+    }
+
+
+    .understanding-risk-hero p {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+
+    .understanding-risk-content-section {
+        padding: 30px 0 40px;
+    }
+
+
+    .understanding-risk-top-grid {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 28px;
+    }
+
+
+    /* Video */
+
+    .understanding-risk-video {
+        width: 100%;
+
+        height: 240px;
+    }
+
+
+    .understanding-risk-video iframe {
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    /* Testimonial */
+
+    .understanding-risk-testimonial {
+        padding: 0 5px;
+    }
+
+
+    .understanding-risk-testimonial-image {
+        width: 50px;
+
+        height: 50px;
+    }
+
+
+    .understanding-risk-testimonial-content p {
+        font-size: 14px;
+
+        line-height: 1.55;
+
+        text-align: left;
+    }
+
+
+    .understanding-risk-author {
+        font-size: 14px;
+
+        text-align: right;
+    }
+
+
+    /* Explanation */
+
+    .understanding-risk-explanation {
+        margin-top: 30px;
+    }
+
+
+    .understanding-risk-explanation p {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 10px;
+    }
+
+
+    .understanding-risk-explanation ul {
+        padding-left: 25px;
+
+        margin-top: 5px;
+    }
+
+
+    .understanding-risk-explanation li {
+        font-size: 14px;
+
+        line-height: 1.55;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* Navigation */
+
+    .understanding-risk-navigation {
+        margin-top: 20px;
+
+        padding-top: 5px;
+    }
+
+
+    .understanding-risk-navigation-link {
+        font-size: 13px;
+    }
+
+}
+
+
+/* ============================= */
+/* Small Mobile */
+/* ============================= */
+
+@media (max-width: 450px) {
+
+    .understanding-risk-hero {
+        height: 130px;
+    }
+
+
+    .understanding-risk-hero h1 {
+        font-size: 21px;
+    }
+
+
+    .understanding-risk-hero p {
+        font-size: 11px;
+    }
+
+
+    .understanding-risk-video {
+        height: 210px;
+    }
+
+
+    .understanding-risk-testimonial-content p {
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+
+
+    .understanding-risk-explanation p {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .understanding-risk-explanation li {
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+
+
+    .understanding-risk-navigation-link {
+        font-size: 12px;
+    }
+
+}

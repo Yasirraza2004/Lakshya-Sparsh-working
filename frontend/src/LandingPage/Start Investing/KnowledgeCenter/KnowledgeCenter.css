@@ -1,0 +1,1126 @@
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.knowledge-center-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.knowledge-center-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.knowledge-center-hero {
+    width: 100%;
+
+    height: 182px;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(20, 27, 40, 0.78),
+            rgba(20, 27, 40, 0.15)
+        ),
+        url("/media/images/knowledge-center-banner.jpeg");
+
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+.knowledge-center-hero-overlay {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.knowledge-center-hero h1 {
+    margin: 0 0 7px 0;
+
+    color: #ffffff;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.knowledge-center-hero p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   MAIN TOP SECTION
+========================================= */
+
+.knowledge-center-main {
+    width: 100%;
+
+    padding: 95px 0 55px 0;
+
+    background: #ffffff;
+}
+
+
+.knowledge-center-top-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(390px, 0.72fr);
+
+    gap: 62px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   LEARNING IMAGE
+========================================= */
+
+.knowledge-learning-section {
+    position: relative;
+
+    width: 100%;
+}
+
+
+.knowledge-learning-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 365px;
+
+    overflow: hidden;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+.knowledge-learning-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.knowledge-learning-image:hover img {
+    transform: scale(1.035);
+}
+
+
+.knowledge-image-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 45px 42px 48px 42px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.72)
+        );
+
+    color: #ffffff;
+}
+
+
+.knowledge-image-overlay h2 {
+    margin: 0 0 4px 0;
+
+    font-size: 34px;
+
+    font-weight: 500;
+}
+
+
+.knowledge-image-overlay p {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   TOPIC BUTTON
+========================================= */
+
+.knowledge-topic-wrapper {
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.knowledge-topic-button {
+    width: 100%;
+
+    height: 58px;
+
+    border: none;
+
+    outline: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #086eb9,
+            #0879c9
+        );
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.knowledge-topic-button:hover,
+.knowledge-topic-button.active {
+    background:
+        linear-gradient(
+            135deg,
+            #075d9e,
+            #086fb8
+        );
+
+    box-shadow:
+        0 7px 18px rgba(8, 110, 185, 0.25);
+}
+
+
+.knowledge-arrow {
+    font-size: 12px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.knowledge-arrow.open {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   QUESTION DROPDOWN
+========================================= */
+
+.knowledge-question-menu {
+    position: absolute;
+
+    left: 50%;
+
+    top: 100%;
+
+    transform: translateX(-50%);
+
+    width: 315px;
+
+    background: #ffffff;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.20);
+
+    border: 1px solid #e2e8ef;
+
+    z-index: 100;
+}
+
+
+.knowledge-question {
+    min-height: 54px;
+
+    box-sizing: border-box;
+
+    padding: 12px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #303030;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e7e7e7;
+
+    font-size: 15px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+.knowledge-question:last-child {
+    border-bottom: none;
+}
+
+
+.knowledge-question:hover {
+    background: #f1f7ff;
+
+    color: #247bd7;
+
+    padding-left: 20px;
+}
+
+
+.question-arrow {
+    color: #458ff0;
+
+    font-size: 18px;
+
+    opacity: 0;
+
+    transform: translateX(-5px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.knowledge-question:hover .question-arrow {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   CALLBACK IMAGE
+========================================= */
+
+.knowledge-callback-section {
+    width: 100%;
+}
+
+
+.knowledge-callback-image {
+    width: 100%;
+
+    height: 245px;
+
+    overflow: hidden;
+
+    border-radius: 2px;
+}
+
+
+.knowledge-callback-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.knowledge-callback-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   MODERN MOBILE NUMBER FORM
+========================================= */
+
+.knowledge-mobile-form {
+    margin-top: 10px;
+
+    width: 100%;
+}
+
+
+/* Main input box */
+
+.knowledge-mobile-input-wrapper {
+    width: 100%;
+
+    min-height: 66px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    background: #ffffff;
+
+    border: 1px solid #dce6ef;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 7px 22px rgba(32, 99, 155, 0.10);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.knowledge-mobile-input-wrapper:focus-within {
+    border-color: #458ff0;
+
+    box-shadow:
+        0 8px 25px rgba(69, 143, 240, 0.20),
+        0 0 0 3px rgba(69, 143, 240, 0.08);
+}
+
+
+/* Country code */
+
+.knowledge-country-code {
+    width: 83px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    background: #f2f5f8;
+
+    border-right: 1px solid #e0e6ec;
+
+    color: #444444;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.knowledge-flag {
+    font-size: 18px;
+}
+
+
+/* Input area */
+
+.knowledge-mobile-input-area {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 5px 13px;
+}
+
+
+.knowledge-mobile-label {
+    color: #458ff0;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+
+    margin-bottom: 1px;
+}
+
+
+.knowledge-mobile-input-area input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+}
+
+
+.knowledge-mobile-input-area input::placeholder {
+    color: #999999;
+}
+
+
+/* GO button */
+
+.knowledge-go-button {
+    width: 65px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9f19,
+            #f48600
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.knowledge-go-button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #ffac2e,
+            #ed7900
+        );
+}
+
+
+.knowledge-go-button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   CALLBACK HINT
+========================================= */
+
+.knowledge-mobile-hint {
+    margin-top: 9px;
+
+    min-height: 61px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 17px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            #202020,
+            #2c2c2c
+        );
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.13);
+}
+
+
+.knowledge-phone-icon {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    font-size: 17px;
+}
+
+
+.knowledge-mobile-hint div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.knowledge-mobile-hint strong {
+    font-size: 13px;
+}
+
+
+.knowledge-mobile-hint span {
+    color: #c9c9c9;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TOPICS SECTION
+========================================= */
+
+.knowledge-topics-section {
+    width: 100%;
+
+    padding: 45px 0 65px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8f8f8,
+            #ffffff
+        );
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+.knowledge-topics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 85px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   TOPIC CARD
+========================================= */
+
+.knowledge-topic-card {
+    display: block;
+
+    text-decoration: none;
+
+    color: #111111;
+
+    text-align: center;
+}
+
+
+.knowledge-topic-image {
+    width: 100%;
+
+    height: 200px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, 0.13);
+
+    background: #3188b7;
+}
+
+
+.knowledge-topic-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.knowledge-topic-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(15, 102, 174, 0.70);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+.knowledge-topic-overlay span {
+    padding: 9px 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 20px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.knowledge-topic-card:hover
+.knowledge-topic-image img {
+    transform: scale(1.07);
+}
+
+
+.knowledge-topic-card:hover
+.knowledge-topic-overlay {
+    opacity: 1;
+}
+
+
+.knowledge-topic-card h3 {
+    margin: 22px 0 0 0;
+
+    color: #111111;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.knowledge-topic-card:hover h3 {
+    color: #458ff0;
+}
+
+
+/* =========================================
+   IMPORTANT LESSONS
+========================================= */
+
+.knowledge-lessons-section {
+    width: 100%;
+
+    padding: 52px 0 70px 0;
+
+    background: #ffffff;
+}
+
+
+.knowledge-lessons-card {
+    max-width: 1040px;
+
+    margin: 0 auto;
+
+    padding: 0 0 10px 0;
+}
+
+
+.knowledge-lessons-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+.knowledge-heading-line {
+    width: 45px;
+
+    height: 2px;
+
+    background: #458ff0;
+}
+
+
+.knowledge-lessons-heading h2 {
+    margin: 0;
+
+    color: #111111;
+
+    font-size: 26px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.knowledge-lessons-card p {
+    margin: 0 0 16px 0;
+
+    color: #222222;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+}
+
+
+.knowledge-lessons-card strong {
+    color: #458ff0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .knowledge-center-container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+    .knowledge-center-main {
+        padding-top: 55px;
+    }
+
+
+    .knowledge-center-top-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .knowledge-callback-section {
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+
+    .knowledge-topics-grid {
+        gap: 25px;
+    }
+
+
+    .knowledge-topic-image {
+        height: 175px;
+    }
+
+
+    .knowledge-lessons-heading h2 {
+        font-size: 23px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .knowledge-center-container {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+
+    .knowledge-center-hero {
+        height: 140px;
+    }
+
+
+    .knowledge-center-hero h1 {
+        font-size: 23px;
+    }
+
+
+    .knowledge-center-hero p {
+        font-size: 13px;
+    }
+
+
+    .knowledge-center-main {
+        padding: 35px 0 45px 0;
+    }
+
+
+    .knowledge-center-top-grid {
+        gap: 32px;
+    }
+
+
+    .knowledge-learning-image {
+        height: 260px;
+    }
+
+
+    .knowledge-image-overlay {
+        padding: 30px 23px 35px 23px;
+    }
+
+
+    .knowledge-image-overlay h2 {
+        font-size: 27px;
+    }
+
+
+    .knowledge-image-overlay p {
+        font-size: 15px;
+    }
+
+
+    .knowledge-topic-button {
+        height: 53px;
+
+        font-size: 14px;
+    }
+
+
+    .knowledge-question-menu {
+        width: calc(100% - 20px);
+    }
+
+
+    .knowledge-question {
+        min-height: 51px;
+
+        font-size: 13px;
+    }
+
+
+    .knowledge-callback-image {
+        height: 210px;
+    }
+
+
+    .knowledge-mobile-input-wrapper {
+        min-height: 62px;
+    }
+
+
+    .knowledge-country-code {
+        width: 68px;
+
+        font-size: 12px;
+    }
+
+
+    .knowledge-flag {
+        font-size: 15px;
+    }
+
+
+    .knowledge-mobile-label {
+        font-size: 8px;
+    }
+
+
+    .knowledge-mobile-input-area input {
+        font-size: 12px;
+    }
+
+
+    .knowledge-go-button {
+        width: 58px;
+
+        font-size: 12px;
+    }
+
+
+    .knowledge-mobile-hint {
+        padding: 9px 12px;
+    }
+
+
+    .knowledge-mobile-hint strong {
+        font-size: 11px;
+    }
+
+
+    .knowledge-mobile-hint span {
+        font-size: 9px;
+    }
+
+
+    .knowledge-topics-section {
+        padding: 35px 0 50px 0;
+    }
+
+
+    .knowledge-topics-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .knowledge-topic-image {
+        height: 210px;
+    }
+
+
+    .knowledge-topic-card h3 {
+        margin-top: 15px;
+
+        font-size: 15px;
+    }
+
+
+    .knowledge-lessons-section {
+        padding: 40px 0 50px 0;
+    }
+
+
+    .knowledge-lessons-heading {
+        gap: 10px;
+    }
+
+
+    .knowledge-heading-line {
+        width: 25px;
+    }
+
+
+    .knowledge-lessons-heading h2 {
+        font-size: 18px;
+    }
+
+
+    .knowledge-lessons-card p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+}

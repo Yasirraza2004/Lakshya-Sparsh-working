@@ -1,0 +1,383 @@
+/* =========================
+   PAGE
+========================= */
+
+.insurance-page {
+    width: 100%;
+
+    min-height: 100vh;
+
+    background: #ffffff;
+}
+
+
+/* =========================
+   TOP BANNER
+========================= */
+
+.insurance-banner {
+    width: 100%;
+
+    height: 170px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(8, 33, 58, 0.72),
+            rgba(8, 33, 58, 0.42)
+        ),
+        url("/media/images/ins-background.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =========================
+   BANNER CONTENT
+========================= */
+
+.insurance-banner-content {
+    width: 74%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+.insurance-banner-text {
+    display: inline-block;
+}
+
+
+.insurance-banner-content h1 {
+    margin: 0 0 8px;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+
+.insurance-banner-content p {
+    margin: 0;
+
+    font-size: 16px;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   INSURANCE SECTION
+========================= */
+
+.insurance-section {
+    width: 100%;
+
+    padding: 45px 0 70px;
+
+    background: #ffffff;
+}
+
+
+.insurance-container {
+    width: 74%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.insurance-container h2 {
+    margin: 0 0 10px;
+
+    color: #458ff0;
+
+    font-size: 25px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   INTRO TEXT
+========================= */
+
+.insurance-intro {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    color: #111111;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================
+   LIFE INSURANCE CARD
+========================= */
+
+.insurance-card-container {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 65px;
+}
+
+
+.insurance-card {
+    width: 580px;
+
+    height: 270px;
+
+    position: relative;
+
+    display: block;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.insurance-card img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+
+/* =========================
+   IMAGE DARK OVERLAY
+========================= */
+
+.insurance-card-overlay {
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(0, 0, 0, 0.35);
+
+    transition:
+        background 0.35s ease;
+}
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.insurance-card-overlay h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.insurance-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.insurance-card:hover img {
+    transform: scale(1.08);
+
+    filter: brightness(0.85);
+}
+
+
+.insurance-card:hover .insurance-card-overlay {
+    background:
+        rgba(8, 33, 58, 0.48);
+}
+
+
+.insurance-card:hover .insurance-card-overlay h3 {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .insurance-banner-content {
+        width: 88%;
+    }
+
+
+    .insurance-container {
+        width: 88%;
+    }
+
+
+    .insurance-section {
+        padding-top: 40px;
+    }
+
+
+    .insurance-intro {
+        font-size: 16px;
+    }
+
+
+    .insurance-card {
+        width: 80%;
+
+        height: 250px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .insurance-banner {
+        height: 160px;
+    }
+
+
+    .insurance-banner-content {
+        width: 90%;
+    }
+
+
+    .insurance-banner-content h1 {
+        font-size: 27px;
+    }
+
+
+    .insurance-banner-content p {
+        font-size: 16px;
+    }
+
+
+    .insurance-section {
+        padding: 35px 0 50px;
+    }
+
+
+    .insurance-container {
+        width: 90%;
+    }
+
+
+    .insurance-container h2 {
+        font-size: 22px;
+
+        line-height: 1.3;
+    }
+
+
+    .insurance-intro {
+        font-size: 15px;
+
+        line-height: 1.5;
+    }
+
+
+    .insurance-card-container {
+        margin-top: 40px;
+    }
+
+
+    .insurance-card {
+        width: 100%;
+
+        height: 210px;
+
+        border-radius: 8px;
+    }
+
+
+    .insurance-card-overlay h3 {
+        font-size: 23px;
+    }
+
+}

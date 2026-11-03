@@ -1,0 +1,230 @@
+/* =========================
+   MAIN PAGE
+========================= */
+
+.financial-workout-page {
+    width: 100%;
+
+    height: calc(100vh - 70px);
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    position: relative;
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+.financial-workout-slider {
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+/* =========================
+   SLIDE TRACK
+========================= */
+
+.financial-workout-track {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.8s ease-in-out;
+}
+
+
+/* =========================
+   INDIVIDUAL SLIDE
+========================= */
+
+.financial-workout-slide {
+    min-width: 100%;
+
+    width: 100%;
+
+    min-height: 100%;
+
+    height: 100%;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   HTML CONTAINER
+========================= */
+
+.financial-workout-html-container {
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   HTML PAGE
+========================= */
+
+.financial-workout-iframe {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    display: block;
+
+    background: #ffffff;
+
+    /*
+       Important:
+       The iframe is visual only so that
+       mouse-wheel events reach React.
+    */
+
+    pointer-events: auto;
+}
+
+
+/* =========================
+   RIGHT SIDE DOTS
+========================= */
+
+.financial-workout-dots {
+    position: fixed;
+
+    right: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    z-index: 50;
+}
+
+
+/* =========================
+   DOT
+========================= */
+
+.financial-workout-dot {
+    width: 8px;
+
+    height: 8px;
+
+    padding: 0;
+
+    border: 1px solid #458ff0;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   ACTIVE DOT
+========================= */
+
+.financial-workout-dot.active {
+    height: 23px;
+
+    border-radius: 5px;
+
+    background: #458ff0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .financial-workout-page {
+        height: calc(100vh - 70px);
+    }
+
+
+    .financial-workout-dots {
+        right: 15px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .financial-workout-page {
+        height: calc(100vh - 65px);
+    }
+
+
+    .financial-workout-dots {
+        right: 8px;
+
+        gap: 7px;
+    }
+
+
+    .financial-workout-dot {
+        width: 7px;
+
+        height: 7px;
+    }
+
+
+    .financial-workout-dot.active {
+        height: 20px;
+    }
+
+}

@@ -1,0 +1,562 @@
+.why-to-invest-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #ffffff;
+
+    color: #111111;
+}
+
+
+/* ============================= */
+/* Container */
+/* ============================= */
+
+.why-to-invest-container {
+    width: 100%;
+    max-width: 1220px;
+
+    margin: 0 auto;
+
+    padding: 0 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* Hero Section */
+/* ============================= */
+
+.why-to-invest-hero {
+    width: 100%;
+    height: 172px;
+
+    background-image: url("/media/images/new-to-investing-banner.jpeg");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.why-to-invest-hero-overlay {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+.why-to-invest-hero .why-to-invest-container {
+    padding-left: 40px;
+}
+
+
+.why-to-invest-hero h1 {
+    margin: 0 0 5px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+
+.why-to-invest-hero p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ============================= */
+/* Main Content */
+/* ============================= */
+
+.why-to-invest-content-section {
+    width: 100%;
+
+    padding: 45px 0 50px;
+
+    background: #ffffff;
+}
+
+
+/* ============================= */
+/* Top Grid */
+/* ============================= */
+
+.why-to-invest-top-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        330px;
+
+    gap: 45px;
+
+    align-items: start;
+}
+
+
+/* ============================= */
+/* Video Section */
+/* ============================= */
+
+.why-to-invest-video-section {
+    width: 100%;
+}
+
+
+/* ============================= */
+/* YouTube Video */
+/* ============================= */
+
+.why-to-invest-video {
+    width: 100%;
+
+    height: 320px;
+
+    background: #000000;
+
+    overflow: hidden;
+
+    position: relative;
+
+    border-radius: 2px;
+}
+
+
+.why-to-invest-video iframe {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    display: block;
+}
+
+
+/* ============================= */
+/* Testimonial */
+/* ============================= */
+
+.why-to-invest-testimonial {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ============================= */
+/* Testimonial Image */
+/* ============================= */
+
+.why-to-invest-testimonial-image {
+    width: 52px;
+
+    height: 52px;
+
+    margin-bottom: 10px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.why-to-invest-person-placeholder {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f3f3f3;
+}
+
+
+.why-to-invest-person-placeholder span {
+    font-size: 25px;
+}
+
+
+/* ============================= */
+/* Testimonial Content */
+/* ============================= */
+
+.why-to-invest-testimonial-content {
+    width: 100%;
+}
+
+
+.why-to-invest-testimonial-content p {
+    margin: 0 0 10px;
+
+    color: #111111;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+
+    text-align: left;
+}
+
+
+.why-to-invest-author {
+    color: #1976b5;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: right;
+
+    margin-top: 4px;
+}
+
+
+/* ============================= */
+/* Investment Explanation */
+/* ============================= */
+
+.why-to-invest-explanation {
+    width: 100%;
+
+    margin-top: 32px;
+}
+
+
+.why-to-invest-explanation p {
+    margin: 0 0 2px;
+
+    color: #111111;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    text-align: left;
+}
+
+
+.why-to-invest-explanation p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ============================= */
+/* Next Topic */
+/* ============================= */
+
+.why-to-invest-next-topic {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 8px;
+}
+
+
+.why-to-invest-risk-link {
+    color: #176ca5;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.why-to-invest-risk-link span {
+    font-size: 15px;
+}
+
+
+.why-to-invest-risk-link:hover {
+    color: #458ff0;
+
+    text-decoration: underline;
+
+    transform: translateX(2px);
+}
+
+
+/* ============================= */
+/* Tablet */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+    .why-to-invest-container {
+        padding: 0 22px;
+    }
+
+
+    .why-to-invest-hero {
+        height: 160px;
+    }
+
+
+    .why-to-invest-hero .why-to-invest-container {
+        padding-left: 30px;
+    }
+
+
+    .why-to-invest-content-section {
+        padding: 40px 0 45px;
+    }
+
+
+    .why-to-invest-top-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            280px;
+
+        gap: 30px;
+    }
+
+
+    .why-to-invest-video {
+        height: 290px;
+    }
+
+
+    .why-to-invest-testimonial-content p {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    .why-to-invest-explanation p {
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .why-to-invest-container {
+        padding: 0 18px;
+    }
+
+
+    .why-to-invest-hero {
+        height: 145px;
+
+        background-position: center;
+    }
+
+
+    .why-to-invest-hero .why-to-invest-container {
+        padding-left: 20px;
+    }
+
+
+    .why-to-invest-hero h1 {
+        font-size: 23px;
+    }
+
+
+    .why-to-invest-hero p {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+
+    .why-to-invest-content-section {
+        padding: 32px 0 40px;
+    }
+
+
+    .why-to-invest-top-grid {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 28px;
+    }
+
+
+    /* Video */
+
+    .why-to-invest-video {
+        width: 100%;
+
+        height: 240px;
+
+        border-radius: 3px;
+    }
+
+
+    .why-to-invest-video iframe {
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    /* Testimonial */
+
+    .why-to-invest-testimonial {
+        padding: 0 5px;
+    }
+
+
+    .why-to-invest-testimonial-image {
+        width: 55px;
+
+        height: 55px;
+    }
+
+
+    .why-to-invest-testimonial-content p {
+        font-size: 14px;
+
+        line-height: 1.55;
+
+        text-align: left;
+    }
+
+
+    .why-to-invest-author {
+        font-size: 14px;
+
+        text-align: right;
+    }
+
+
+    /* Explanation */
+
+    .why-to-invest-explanation {
+        margin-top: 30px;
+    }
+
+
+    .why-to-invest-explanation p {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* Next Topic */
+
+    .why-to-invest-next-topic {
+        justify-content: flex-end;
+
+        margin-top: 15px;
+    }
+
+}
+
+
+/* ============================= */
+/* Small Mobile */
+/* ============================= */
+
+@media (max-width: 450px) {
+
+    .why-to-invest-hero {
+        height: 130px;
+    }
+
+
+    .why-to-invest-hero h1 {
+        font-size: 21px;
+    }
+
+
+    .why-to-invest-hero p {
+        font-size: 11px;
+    }
+
+
+    .why-to-invest-video {
+        height: 210px;
+    }
+
+
+    .why-to-invest-testimonial-content p {
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+
+
+    .why-to-invest-explanation p {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .why-to-invest-risk-link {
+        font-size: 12px;
+    }
+
+}

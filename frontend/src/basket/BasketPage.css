@@ -1,0 +1,972 @@
+/* ================================
+   MAIN PAGE
+================================ */
+
+.basket-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172b4d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.basket-hero {
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #f1f7ff 0%,
+    #ffffff 55%,
+    #edf6ff 100%
+  );
+  padding: 60px 20px;
+}
+
+.basket-hero-content {
+  max-width: 850px;
+}
+
+.basket-small-title {
+  display: inline-block;
+  color: #458ff0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.basket-hero h1 {
+  margin: 0;
+  font-size: 58px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #172b4d;
+}
+
+.basket-hero h1 span {
+  color: #458ff0;
+}
+
+.basket-hero p {
+  max-width: 650px;
+  margin: 25px auto 0;
+  color: #667085;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.basket-container {
+  width: 90%;
+  max-width: 1250px;
+  margin: auto;
+  padding: 75px 0;
+}
+
+.light-section {
+  width: 100%;
+  max-width: none;
+  padding-left: 5%;
+  padding-right: 5%;
+  background: #f8fafc;
+}
+
+
+/* ================================
+   STEP HEADING
+================================ */
+
+.basket-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #458ff0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.section-label {
+  display: block;
+  color: #458ff0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.basket-step h2,
+.results-header h2,
+.details-heading h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 34px;
+}
+
+.section-description {
+  margin: 10px 0 0;
+  color: #667085;
+  font-size: 16px;
+}
+
+
+/* ================================
+   GOAL CARDS
+================================ */
+
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.goal-card {
+  position: relative;
+  min-height: 170px;
+  border: 1px solid #e1e7ef;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+  border-color: #458ff0;
+  box-shadow: 0 12px 35px rgba(69, 143, 240, 0.12);
+}
+
+.goal-card.selected {
+  border: 2px solid #458ff0;
+  background: #f4f9ff;
+}
+
+.goal-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #edf5ff;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.goal-card span {
+  color: #172b4d;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.selected-check {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #458ff0;
+  color: #ffffff !important;
+  font-size: 14px !important;
+}
+
+
+/* ================================
+   INVESTMENT FORM
+================================ */
+
+.investment-form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.toggle-buttons {
+  display: flex;
+  height: 52px;
+}
+
+.toggle-buttons button {
+  flex: 1;
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #667085;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.toggle-buttons button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.toggle-buttons button:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.toggle-buttons button.active {
+  background: #458ff0;
+  color: #ffffff;
+  border-color: #458ff0;
+}
+
+.amount-input {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.amount-input span {
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.amount-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  font-size: 15px;
+  color: #172b4d;
+  background: transparent;
+}
+
+.form-group select {
+  height: 52px;
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #344054;
+  outline: none;
+  cursor: pointer;
+}
+
+.form-group select:focus,
+.amount-input:focus-within {
+  border-color: #458ff0;
+}
+
+
+/* ================================
+   CONTINUE BUTTON
+================================ */
+
+.continue-button {
+  margin-top: 35px;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 28px;
+  background: #458ff0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.2s ease;
+}
+
+.continue-button:hover {
+  background: #307bdc;
+  transform: translateY(-2px);
+}
+
+.continue-button span {
+  font-size: 20px;
+}
+
+
+/* ================================
+   RESULTS
+================================ */
+
+.results-section {
+  padding-top: 80px;
+}
+
+.results-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.results-header p {
+  margin: 8px 0 0;
+  color: #667085;
+}
+
+.result-count {
+  padding: 9px 15px;
+  border-radius: 30px;
+  background: #edf5ff;
+  color: #458ff0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   BASKET CARDS
+================================ */
+
+.basket-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.investment-card {
+  border: 1px solid #e4e7ec;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 27px;
+  transition: all 0.25s ease;
+}
+
+.investment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(16, 24, 40, 0.08);
+  border-color: #458ff0;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-tag {
+  padding: 6px 10px;
+  background: #edf5ff;
+  color: #458ff0;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.fund-count {
+  color: #667085;
+  font-size: 12px;
+}
+
+.investment-card h3 {
+  margin: 25px 0 10px;
+  color: #172b4d;
+  font-size: 23px;
+}
+
+.card-description {
+  min-height: 70px;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 25px 0;
+  padding: 18px 0;
+  border-top: 1px solid #eaecf0;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.card-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-info span,
+.card-bottom span {
+  color: #98a2b3;
+  font-size: 11px;
+}
+
+.card-info strong {
+  color: #344054;
+  font-size: 13px;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.card-bottom div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-bottom strong {
+  color: #172b4d;
+  font-size: 17px;
+}
+
+.card-bottom button {
+  border: none;
+  background: transparent;
+  color: #458ff0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.card-bottom button span {
+  color: #458ff0;
+  font-size: 18px;
+}
+
+
+/* ================================
+   NO RESULTS
+================================ */
+
+.no-results {
+  padding: 70px 20px;
+  text-align: center;
+  border: 1px solid #eaecf0;
+  border-radius: 15px;
+}
+
+.no-results div {
+  font-size: 40px;
+}
+
+.no-results h3 {
+  margin: 15px 0 5px;
+  color: #172b4d;
+}
+
+.no-results p {
+  color: #667085;
+}
+
+.no-results button {
+  margin-top: 15px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 7px;
+  background: #458ff0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+/* ================================
+   DETAILS
+================================ */
+
+.details-section {
+  padding-top: 30px;
+}
+
+.details-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.details-heading p {
+  max-width: 700px;
+  color: #667085;
+  line-height: 1.6;
+}
+
+.close-details {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d0d5dd;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #667085;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+/* ================================
+   BASKET SUMMARY
+================================ */
+
+.basket-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.basket-summary div {
+  padding: 22px;
+  border-right: 1px solid #e4e7ec;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.basket-summary div:last-child {
+  border-right: none;
+}
+
+.basket-summary span,
+.investment-summary span {
+  color: #98a2b3;
+  font-size: 12px;
+}
+
+.basket-summary strong,
+.investment-summary strong {
+  color: #172b4d;
+  font-size: 15px;
+}
+
+
+/* ================================
+   INVESTMENT SUMMARY
+================================ */
+
+.investment-summary {
+  display: flex;
+  gap: 50px;
+  padding: 22px;
+  border-radius: 12px;
+  background: #f4f9ff;
+  margin-bottom: 35px;
+}
+
+.investment-summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.investment-summary small {
+  margin-left: 4px;
+  font-size: 11px;
+  color: #667085;
+}
+
+
+/* ================================
+   FUND TABLE
+================================ */
+
+.fund-table-wrapper {
+  border: 1px solid #dfe3e8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-title {
+  padding: 25px;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.table-title h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #172b4d;
+}
+
+.fund-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.fund-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.fund-table th {
+  background: #f2f2f3;
+  color: #172b4d;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  padding: 18px 15px;
+  white-space: nowrap;
+}
+
+.fund-table td {
+  padding: 18px 15px;
+  border-top: 1px solid #e4e7ec;
+  color: #344054;
+  font-size: 13px;
+}
+
+.fund-table tbody tr:hover {
+  background: #fafcff;
+}
+
+.fund-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 300px;
+  max-width: 420px;
+  line-height: 1.5;
+}
+
+.fund-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #edf5ff;
+  color: #458ff0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.allocation {
+  color: #458ff0;
+}
+
+.nav-value {
+  color: #008000 !important;
+  font-weight: 600;
+}
+
+.return-value {
+  color: #008000;
+  font-weight: 600;
+}
+
+.not-available {
+  color: #667085;
+}
+
+
+/* ================================
+   ACTIONS
+================================ */
+
+.basket-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.invest-button,
+.advisor-button {
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.invest-button {
+  border: none;
+  background: #458ff0;
+  color: #ffffff;
+}
+
+.invest-button span {
+  margin-left: 12px;
+  font-size: 18px;
+}
+
+.advisor-button {
+  border: 1px solid #458ff0;
+  background: #ffffff;
+  color: #458ff0;
+}
+
+
+/* ================================
+   DISCLAIMER
+================================ */
+
+.basket-disclaimer {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff8e8;
+}
+
+.basket-disclaimer strong {
+  color: #694f00;
+  font-size: 12px;
+}
+
+.basket-disclaimer p {
+  margin: 7px 0 0;
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   BOTTOM CTA
+================================ */
+
+.basket-cta {
+  padding: 65px 8%;
+  background: #172b4d;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.basket-cta > div {
+  max-width: 700px;
+}
+
+.basket-cta span {
+  color: #8ebdff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.basket-cta h2 {
+  margin: 10px 0;
+  font-size: 32px;
+}
+
+.basket-cta p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.basket-cta button {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 25px;
+  background: #458ff0;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.basket-cta button span {
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+
+  .goal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .investment-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .basket-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .basket-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .basket-summary div:nth-child(2) {
+    border-right: none;
+  }
+
+  .basket-summary div:nth-child(3),
+  .basket-summary div:nth-child(4) {
+    border-top: 1px solid #e4e7ec;
+  }
+
+  .basket-summary div:nth-child(3) {
+    border-right: 1px solid #e4e7ec;
+  }
+
+  .basket-hero h1 {
+    font-size: 48px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .basket-container {
+    width: 90%;
+    padding: 55px 0;
+  }
+
+  .light-section {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .basket-hero {
+    min-height: 330px;
+  }
+
+  .basket-hero h1 {
+    font-size: 38px;
+  }
+
+  .basket-hero p {
+    font-size: 15px;
+  }
+
+  .basket-step {
+    gap: 12px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 11px;
+  }
+
+  .basket-step h2,
+  .results-header h2,
+  .details-heading h2 {
+    font-size: 27px;
+  }
+
+  .goal-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .goal-card {
+    min-height: 140px;
+    padding: 17px;
+  }
+
+  .goal-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .goal-card span {
+    font-size: 14px;
+  }
+
+  .investment-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .basket-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .basket-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .investment-summary {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .basket-actions {
+    flex-direction: column;
+  }
+
+  .invest-button,
+  .advisor-button {
+    width: 100%;
+  }
+
+  .basket-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 7%;
+  }
+
+  .basket-cta h2 {
+    font-size: 26px;
+  }
+
+  .basket-cta button {
+    width: 100%;
+  }
+
+}

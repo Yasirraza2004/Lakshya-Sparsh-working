@@ -1,0 +1,631 @@
+/* =========================
+   PAGE
+========================= */
+
+.wealth-planner {
+    min-height: calc(100vh - 90px);
+
+    padding: 70px 20px 90px;
+
+    background: #f6f9fd;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.wealth-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.planner-tag {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #458ff0;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.wealth-header h1 {
+    margin: 0;
+
+    color: #172b4d;
+
+    font-size: 44px;
+
+    font-weight: 700;
+}
+
+.wealth-header p {
+    margin: 10px 0 0;
+
+    color: #718096;
+
+    font-size: 19px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.planner-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.75fr;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.planner-form {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 35px rgba(25, 50, 80, 0.07);
+
+    border: 1px solid #edf1f6;
+}
+
+.planner-form h2 {
+    margin: 0;
+
+    color: #172b4d;
+
+    font-size: 25px;
+}
+
+.form-description {
+    margin: 8px 0 32px;
+
+    color: #718096;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #26364d;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   GOAL BUTTONS
+========================= */
+
+.goal-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.goal-btn {
+    padding: 10px 15px;
+
+    border: 1px solid #dfe6ef;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #526174;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.goal-btn:hover {
+    border-color: #458ff0;
+
+    color: #458ff0;
+}
+
+.goal-btn.selected {
+    background: #458ff0;
+
+    border-color: #458ff0;
+
+    color: white;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.form-group > input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    border: 1px solid #dfe6ef;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    color: #172b4d;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+    transition: 0.2s;
+}
+
+.form-group > input:focus {
+    border-color: #458ff0;
+
+    box-shadow: 0 0 0 3px rgba(69, 143, 240, 0.1);
+}
+
+
+/* =========================
+   AMOUNT
+========================= */
+
+.amount-input {
+    display: flex;
+
+    align-items: center;
+
+    height: 48px;
+
+    border: 1px solid #dfe6ef;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+}
+
+.amount-input:focus-within {
+    border-color: #458ff0;
+
+    box-shadow: 0 0 0 3px rgba(69, 143, 240, 0.1);
+}
+
+.amount-input span {
+    padding-left: 15px;
+
+    color: #458ff0;
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+.amount-input input {
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0 12px;
+
+    border: none;
+
+    outline: none;
+
+    color: #172b4d;
+
+    font-size: 17px;
+}
+
+
+/* Remove number arrows */
+
+.amount-input input::-webkit-inner-spin-button,
+.amount-input input::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+
+/* =========================
+   SLIDER HEADING
+========================= */
+
+.slider-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.slider-heading label {
+    margin: 0;
+}
+
+.slider-heading strong {
+    color: #458ff0;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+.planner-slider {
+    width: 100%;
+
+    height: 6px;
+
+    appearance: none;
+
+    background: #dce5f0;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* Chrome */
+
+.planner-slider::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #458ff0;
+
+    border: 3px solid white;
+
+    box-shadow: 0 0 0 2px #458ff0;
+
+    cursor: pointer;
+}
+
+
+/* Firefox */
+
+.planner-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #458ff0;
+
+    border: 3px solid white;
+
+    cursor: pointer;
+}
+
+.slider-values {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 7px;
+
+    color: #9aa6b5;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESULT CARD
+========================= */
+
+.planner-result {
+    position: sticky;
+
+    top: 110px;
+
+    background: #172b4d;
+
+    padding: 32px;
+
+    border-radius: 16px;
+
+    color: white;
+
+    box-shadow: 0 15px 40px rgba(23, 43, 77, 0.2);
+}
+
+
+/* =========================
+   RESULT HEADER
+========================= */
+
+.result-header span {
+    color: #a9c9f7;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+.result-header h2 {
+    margin: 7px 0 25px;
+
+    font-size: 25px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   MAIN RESULT
+========================= */
+
+.main-result {
+    padding: 22px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.main-result span {
+    display: block;
+
+    color: #b8c6d9;
+
+    font-size: 13px;
+}
+
+.main-result strong {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #ffc233;
+
+    font-size: 34px;
+}
+
+.main-result small {
+    color: #aab9cc;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESULT GRID
+========================= */
+
+.result-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.result-box {
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-radius: 9px;
+}
+
+.result-box span {
+    display: block;
+
+    color: #9eafc5;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.result-box strong {
+    color: white;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.result-summary {
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.result-summary div {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.result-summary span {
+    color: #aab9cc;
+
+    font-size: 13px;
+}
+
+.result-summary strong {
+    color: white;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.invest-button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ffc233;
+
+    color: #172b4d;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.invest-button span {
+    margin-left: 8px;
+
+    font-size: 19px;
+}
+
+.invest-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(255, 194, 51, 0.25);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+    .planner-container {
+        grid-template-columns: 1fr;
+    }
+
+    .planner-result {
+        position: static;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .wealth-planner {
+        padding: 45px 15px 60px;
+    }
+
+    .wealth-header {
+        margin-bottom: 30px;
+    }
+
+    .wealth-header h1 {
+        font-size: 32px;
+    }
+
+    .wealth-header p {
+        font-size: 16px;
+    }
+
+    .planner-form {
+        padding: 25px 20px;
+    }
+
+    .planner-form h2 {
+        font-size: 22px;
+    }
+
+    .goal-buttons {
+        gap: 7px;
+    }
+
+    .goal-btn {
+        padding: 9px 11px;
+
+        font-size: 13px;
+    }
+
+    .planner-result {
+        padding: 25px 20px;
+    }
+
+    .main-result strong {
+        font-size: 28px;
+    }
+
+    .result-grid {
+        gap: 8px;
+    }
+
+}
